@@ -1,0 +1,33 @@
+<style>
+	body{font-family: fantasy, sans-serif;}
+	h2{text-align: center; background-color: #04a051; padding: 5px 0px 5px 0px;}
+	#container{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto;}
+	table{width: 25vw; border-collapse: collapse;}
+	td, th{padding: 5px; border-bottom: 2px solid #91FF00; text-align: left;}
+	th{font-size: 20px; color: white; background-color: #2A2A2A;}
+	td:th-child{background-color: #0A0A0A;}
+	tr:hover{background-color: lightgrey;}
+
+	@media only screen and (max-width: 600px) 
+    {
+    	table{width: 90vw;}
+    }
+
+</style>
+<div id= "container">
+<h2>Game Scores</h2>
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Score</th>
+	</thead>
+	<tbody>
+		{{#each scores}}
+		<tr>
+			<td>{{this.name}}</td>
+			<td>{{this.score}}</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+</div>
